@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Last Visited Injector",
+    "version": "1.0",
+    "description": "Injects a list of last visited repositories on the GitHub dashboard.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://github.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/"],
+            "js": ["index-background.js"]
+        },
+        {
+            "matches": ["https://github.com/*/*"],
+            "js": [
+                "repo-background.js"
+            ]
+        }
+    ]
+}
