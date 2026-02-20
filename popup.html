@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Last Visited — Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 260px;
+            padding: 12px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+        }
+
+        #status {
+            margin-left: 8px;
+            color: green;
+        }
+
+        button {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Settings</h3>
+    <label>
+        Show up to
+        <input id="maxRepos" type="number" min="1" value="10" style="width:60px;"> repositories
+    </label>
+    <label>
+        Limit to this users or organizations
+        <textarea id="filter" placeholder="Comma-separated list" rows="3" style="width:100%;"></textarea>
+    </label>
+    <button id="save">Save</button>
+    <span id="status"></span>
+    <script src="popup.js"></script>
+</body>
+
+</html>
