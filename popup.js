@@ -3,7 +3,10 @@ document.getElementById('save').addEventListener('click', saveSettings);
 
 function saveSettings() {
   const max = parseInt(document.getElementById('maxRepos').value, 10) || 10;
-  const filter = document.getElementById('filter').value;
+  let filter = document.getElementById('filter').value;
+  if (filter){
+    filter = filter.replace(/[\s\t\n;]/g, ',').split(',').map(f => f.trim()).filter(f => f).join(',');
+  }
   try {
     chrome.storage.sync.set({ maxRepos: max, filter: filter }, () => {
         const status = document.getElementById('status');
