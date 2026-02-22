@@ -15,22 +15,17 @@ const getCleanPath = () => {
   const match = window.location.pathname.match(/^\/[^/]+\/[^/]+/);
   return match ? match[0] : null;
 }
-console.log('Background script loaded, waiting for config...');
+
 (async () => {
-  console.log('Applying config...');
   await applyConfig();
   
-  
-  console.log('Current config - Repo Limit:', REPO_LIMIT, 'Filter:', FILTER);
   const currentPath = getCleanPath();
   if (!currentPath) return;
   
   let lastRepos = JSON.parse(localStorage.getItem("lastRepos") || "[]");
   if (FILTER.length > 0) {
     const [owner] = currentPath.split('/').slice(1);
-    console.log('Owner:', owner, 'Filter:', FILTER);
     if (!FILTER.includes(owner)) {
-      console.log('Owner not in filter, skipping:', owner);
       return;
     }
   }
