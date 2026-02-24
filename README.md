@@ -4,8 +4,6 @@ GitHub Last Visited is a lightweight browser extension (Chrome / Edge / Chromium
 
 It helps you quickly return to projects you were recently working on without searching or checking browser history.
 
----
-
 ## Features
 
 - Tracks recently visited repositories
@@ -17,8 +15,6 @@ It helps you quickly return to projects you were recently working on without sea
 - No external database
 - 100% local storage; all data stays in your browser
 
----
-
 ## Installation (Developer Mode)
 
 1. Clone the repository.
@@ -28,8 +24,6 @@ It helps you quickly return to projects you were recently working on without sea
 3. Enable Developer mode.
 4. Click "Load unpacked".
 5. Select the cloned repository folder.
-
----
 
 ## How It Works
 
@@ -50,8 +44,6 @@ When you visit the GitHub homepage:
 - It injects a container into the dashboard.
 - Your recent repositories appear as clickable links.
 
----
-
 ## Configuration
 
 Click the extension icon to configure:
@@ -60,8 +52,6 @@ Click the extension icon to configure:
 - Owner filter (comma-separated usernames/organizations).
 
 Settings are stored using the browser sync storage API.
-
----
 
 ## Permissions
 
@@ -78,8 +68,6 @@ These permissions are used only to:
 - Store local configuration.
 - Inject the recent repositories UI.
 
----
-
 ## Technical Details
 
 - Manifest V3
@@ -87,15 +75,11 @@ These permissions are used only to:
 - Uses browser storage APIs
 - No external dependencies
 
----
-
 ## Limitations
 
 - Works only on GitHub pages.
 - Clearing browser storage removes saved history.
 - Settings sync depends on browser support.
-
----
 
 ## License
 
