@@ -22,12 +22,15 @@ const divGen =  (titleTxt, repos) => {
 
   repos.forEach((path) => {
     const li = document.createElement("li");
+    li.style.overflow = "hidden";
+    li.style.textOverflow = "ellipsis";
+    li.style.whiteSpace = "nowrap";
 
     const a = document.createElement("a");
     a.className = "color-fg-default lh-0 mb-2 markdown-title";
     a.href = path;
     a.setAttribute("aria-keyshortcuts", "Alt+ArrowUp");
-
+    
     a.appendChild(document.createTextNode("- "+path));
 
     li.appendChild(a);
